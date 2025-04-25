@@ -55,7 +55,6 @@ nav{
 #hero{
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
     padding-block: 1.5rem;
     & .img-animation{
         position: relative;
@@ -73,12 +72,15 @@ nav{
             left: 50%;
             transform: translate(-50%);
 
+            animation:  move-bg 2.5s ease;
         }
 
         img[src*="patins-image"]{
             left: 50%;
             transform: translate(-50%);
             width: 19.5rem;
+
+            animation: move-patins 2s ease;
         }
 
         img[src*="Stars 1"]{
@@ -87,6 +89,7 @@ nav{
 
             width: 3.5rem;
 
+            animation: move-stars 2s ease;
         }
 
         img[src*="Stars 2"]{
@@ -94,11 +97,13 @@ nav{
             right: .1rem;
 
             width: 1.5rem;
+
+            animation: move-stars 2.5s ease;
         }
     }
 
     & .text-animation{
-        
+        flex-direction: column;
         & h1 div{
             display: inline-block;
             vertical-align: bottom;
@@ -118,18 +123,49 @@ nav{
 
             & span{
                 display: block;
-                animation: slideUp 6s infinite ease;
+                animation: slideUp 6s 2s infinite ease;
             }
 
+        }
+
+        & .btn{
+            display: grid;
+            margin-top: 3rem;
+            gap: 1.5rem;
+
+            & a{
+                font: var(--btn-label);
+            }
+
+            & a:nth-child(1){
+                align-items: center;
+                gap: .75rem;
+
+                & span{
+                    display: flex;
+                    background-color: white;
+                    border-radius: 50%;
+                    padding: 1.5rem;
+                }
+            
+            }
+
+            & a:nth-child(2){
+                justify-content: center;
+                padding: 1.5rem 3rem;
+                border-radius: 5rem;
+                gap: .75rem;
+                background-color: var(--snitap-sun);
+
+                & img{
+                    vertical-align: bottom;
+                }
+            }
         }
     }
 
     & .img-animation + .text-animation{
         margin-top: 2.5rem;
-    }
-
-    @media (width >= 80em){
-
     }
     
 }
@@ -251,9 +287,6 @@ nav{
     
                 left: 50%;
                 transform: translate(-50%);
-
-                animation:  move-bg 2.5s ease;
-    
             }
     
             img[src*="patins-image"]{
@@ -262,17 +295,12 @@ nav{
                 transform: translate(-50%);
                 width: 30.5rem;
                 z-index: 10;
-
-                animation: move-patins 2s ease;
             }
     
             img[src*="Stars 1"]{
                 top: 5.375rem;
                 left: 1.5rem;
                 width: 5.5rem;
-
-                animation: move-stars 2s ease;
-    
             }
     
             img[src*="Stars 2"]{
@@ -280,7 +308,6 @@ nav{
                 right: -.4rem;
     
                 width: 2.5rem;
-                animation: move-stars 2s ease;
             }
         }
 
@@ -289,6 +316,36 @@ nav{
         
             & h1 div{
                 height: 5rem;
+            }
+
+            & .btn{
+                display: flex;
+
+                flex-direction: row-reverse;
+                justify-content: start;
+                gap: 2rem;
+
+                & a{
+                    transition: transform 350ms;
+                }
+                
+                & a:nth-child(2){
+                    & img{
+                        margin-right: .75rem;
+                    }
+                }
+            }
+
+            & .shadow{
+                box-shadow:
+                0 2px 5px rgb(0 0 0 / .1),
+                0 9px 9px rgb(0 0 0 / .09),
+                0 20px 12px rgb(0 0 0 / .05),
+                0 36px 15px rgb(0 0 0 / .01);
+            }
+
+            & a:hover{
+                transform: scale(1.1);
             }
         }
     }
