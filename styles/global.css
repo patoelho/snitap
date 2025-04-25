@@ -1,0 +1,44 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --snitap-sun: #FFCD1E;
+    --snitap-sky-mid: #06B6D4;
+    --snitap-sky-light: #67E8F9;
+    --snitap-joy-mid: #DB2777;
+    --snitap-joy-light: #F472B6;
+    --snitap-leaf-mid: #16A34A;
+
+    --bg: #FAFAFA;
+
+    --highlights: #000000;
+    --text-color: var(--highlights);
+
+    --font-syne: "Syne", sans-serif;
+    --h1: 700 2rem/1.25 var(--font-syne);
+    --h2: 700 2.5rem/1.2 var(--font-syne);
+
+    --font-montserrat: "Montserrat", sans-serif;
+    --btn-label: 400 1rem/1.5 var(--font-montserrat);
+    --text: 400 .875rem/1.5 var(--font-montserrat);
+
+    --font-inter: "Inter" sans-serif;
+
+    --px-lg: 1.5rem;
+}
+
+@media (width >= 80em) {
+
+    :root{
+        --h1: 700 4rem/1.25 var(--font-syne);
+        --h2: 700 2.5rem/1.2 var(--font-syne);
+
+        --text: 400 .75rem/1.5 var(--font-montserrat);
+
+        --px-lg: 2rem;
+    }
+
+}
