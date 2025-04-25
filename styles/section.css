@@ -55,6 +55,7 @@ nav{
 #hero{
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
     padding-block: 1.5rem;
     & .img-animation{
         position: relative;

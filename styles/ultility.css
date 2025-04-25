@@ -16,7 +16,7 @@ img{
 
 body{
     background-color: var(--bg);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 h1, h2{
